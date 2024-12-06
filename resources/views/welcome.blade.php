@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.app', ['withOutHeaderSidebar' => true])
 @section('title', 'IIFON Admin Dashboard')
 @section('content')
     <div class="col-md-12 col-lg-12">

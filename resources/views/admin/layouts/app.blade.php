@@ -20,31 +20,36 @@
     <x-common.loader />
     <!-- loader END -->
 
-    <!-- Sidebar Section Start -->
-    <x-partials.sidebar />
-    <!-- Sidebar Section End -->
 
-    <main class="main-content">
-        <!-- Header Section Start -->
-        <x-partials.header />
-        <!-- Header Section End -->
-
+    @if ($withOutHeaderSidebar)
         <!-- Sidebar Section Start -->
-        <div class="conatiner-fluid content-inner mt-n5 py-0">
-            <div class="row">
-                @yield('content')
-            </div>
-        </div>
+        <x-partials.sidebar />
         <!-- Sidebar Section End -->
 
-        <!-- Main Body Start -->
-        <x-partials.footer />
-        <!--  Main Body End -->
-    </main>
+        <main class="main-content">
+            <!-- Header Section Start -->
+            <x-partials.header />
+            <!-- Header Section End -->
 
-    <!-- offcanvas start -->
-    <x-partials.offcanvas />
-    <!-- offcanvas End -->
+            <!-- Sidebar Section Start -->
+            <div class="conatiner-fluid content-inner mt-n5 py-0">
+                <div class="row">
+                    @yield('content')
+                </div>
+            </div>
+            <!-- Sidebar Section End -->
+
+            <!-- Main Body Start -->
+            <x-partials.footer />
+            <!--  Main Body End -->
+        </main>
+
+        <!-- offcanvas start -->
+        <x-partials.offcanvas />
+        <!-- offcanvas End -->
+    @else
+        @yield('content')
+    @endif
 
     <!-- Script Section Start -->
     <x-partials.scripts />
