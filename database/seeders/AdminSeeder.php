@@ -15,31 +15,29 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        $user_role = Role::where('slug', 'admin')->first();
+        $useRole = Role::where('slug', 'admin')->first();
         $user = User::where('email', 'admin@gmail.com')->first();
         if (is_null($user)) {
             $user = new User();
-            $user->first_name = "Admin";
+            $user->name = "Admin";
             $user->email = "admin@gmail.com";
             $user->password = Hash::make('12345678');
             $user->is_admin = true;
             $user->is_verified = 1;
             $user->save();
-            $user_id = $user->id;
-            $user->roles()->attach($user_role);
+            $user->roles()->attach($useRole);
         }
 
         $user = User::where('email', 'superadmin@gmail.com')->first();
         if (is_null($user)) {
             $user = new User();
-            $user->first_name = "Super Admin";
+            $user->name = "Super Admin";
             $user->email = "superadmin@gmail.com";
             $user->password = Hash::make('12345678');
             $user->is_admin = true;
             $user->is_verified = 1;
             $user->save();
-            $user_id = $user->id;
-            $user->roles()->attach($user_role);
+            $user->roles()->attach($useRole);
         }
     }
 }

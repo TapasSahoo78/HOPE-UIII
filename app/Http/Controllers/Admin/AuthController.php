@@ -31,7 +31,7 @@ class AuthController extends BaseController
             $validator = Validator::make($request->all(), $this->loginRules);
 
             if ($validator->fails()) {
-                return $this->responseJson(false, 422, $validator->errors()->first());
+                return $this->responseJson(false, 200, $validator->errors()->first());
             }
             DB::beginTransaction();
             try {
@@ -41,7 +41,7 @@ class AuthController extends BaseController
                     DB::commit();
                     return $this->responseJson(true, 200, config('message.MSG_RECORD_LOGIN_SUCCESS'), route('admin.dashboard'));
                 }
-                return $this->responseJson(false, 200, config('message.ADMIN_LOGIN_FAILED'), route('admin.login'));
+                return $this->responseJson(false, 200, config('message.MSG_RECORD_LOGIN_FAILED'), route('admin.login'));
             } catch (Exception $e) {
                 DB::rollback();
                 logger($e->getMessage() . ' -- ' . $e->getLine() . ' -- ' . $e->getFile());

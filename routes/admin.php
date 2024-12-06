@@ -16,7 +16,6 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
         Route::match(['GET', 'POST'], 'login', 'adminLogin')->name('login');
     });
 
-    // middleware('permission:driver_mgmt_view');
     /************************ For Auth Users ******************************/
     Route::middleware(['auth:web', 'role:admin'])->group(function () {
 

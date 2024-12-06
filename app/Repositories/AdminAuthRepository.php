@@ -25,4 +25,10 @@ class AdminAuthRepository implements AdminAuthInterface
             return $login;
         }
     }
+
+    public function logout()
+    {
+        $logout = Auth::logout();
+        return $logout;
+    }
 }

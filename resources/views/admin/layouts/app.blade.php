@@ -28,11 +28,14 @@
 
         <main class="main-content">
             <!-- Header Section Start -->
-            <x-partials.header />
+            <div class="position-relative iq-banner">
+                <x-partials.header />
+                @yield('header-nav')
+            </div>
             <!-- Header Section End -->
 
             <!-- Sidebar Section Start -->
-            <div class="conatiner-fluid content-inner mt-n5 py-0">
+            <div class="conatiner-fluid content-inner mt-n5 py-0" style="margin-top: 15px !important;">
                 <div class="row">
                     @yield('content')
                 </div>
