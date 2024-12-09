@@ -17,14 +17,12 @@ class RoleSeeder extends Seeder
             [
                 'name' => 'admin',
                 'slug' => 'admin',
+                'is_admin' => 0
             ],
             [
                 'name' => 'user',
                 'slug' => 'user',
-            ],
-            [
-                'name' => 'Guru',
-                'slug' => 'guru',
+                'is_admin' => 1
             ]
         ];
 

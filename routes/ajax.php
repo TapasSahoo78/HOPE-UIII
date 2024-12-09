@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'ajax', 'as' => 'ajax.'], function () {
     Route::controller(AjaxController::class)->group(function () {
         Route::get('/roles/data', 'getData')->name('role.data');
+        Route::get('/assign/data', 'assignUserData')->name('assign.data');
     });
 });

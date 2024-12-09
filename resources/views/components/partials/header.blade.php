@@ -41,7 +41,7 @@
                 </svg>
             </i>
         </div>
-        <div class="input-group search-input">
+        {{-- <div class="input-group search-input">
             <span class="input-group-text" id="search-input">
                 <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@
                 </svg>
             </span>
             <input type="search" class="form-control" placeholder="Search...">
-        </div>
+        </div> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
@@ -65,8 +65,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link" id="mail-drop" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="nav-link" id="mail-drop" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                         <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.4"

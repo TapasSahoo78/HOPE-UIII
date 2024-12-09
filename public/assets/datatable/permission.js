@@ -1,14 +1,14 @@
 $(document).ready(function () {
     var baseUrl = APP_URL + '/';
-    if ($.fn.DataTable.isDataTable('#roleTable')) {
-        $('#roleTable').DataTable().destroy();
+    if ($.fn.DataTable.isDataTable('#assignUserTable')) {
+        $('#assignUserTable').DataTable().destroy();
     }
 
     // Initialize the DataTable regardless
-    $('#roleTable').DataTable({
+    $('#assignUserTable').DataTable({
         processing: true,
         serverSide: true,
-        ajax: baseUrl + 'ajax/roles/data',
+        ajax: baseUrl + 'ajax/assign/data',
         columns: [{
             data: 'DT_RowIndex',
             name: 'DT_RowIndex',
@@ -18,6 +18,10 @@ $(document).ready(function () {
         {
             data: 'name',
             name: 'name'
+        },
+        {
+            data: 'role',
+            name: 'role'
         },
         {
             data: 'action',

@@ -20,7 +20,6 @@
     <x-common.loader />
     <!-- loader END -->
 
-
     @if ($withOutHeaderSidebar)
         <!-- Sidebar Section Start -->
         <x-partials.sidebar />
