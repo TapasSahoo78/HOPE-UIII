@@ -48,12 +48,7 @@
         <div class="sidebar-list">
             <!-- Sidebar Menu Start -->
             <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
-                <li class="nav-item static-item">
-                    <a class="nav-link static-item disabled" href="#" tabindex="-1">
-                        <span class="default-icon">Home</span>
-                        <span class="mini-icon">-</span>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('admin.dashboard') }}">
                         <i class="icon">
@@ -136,7 +131,7 @@
                     </li>
                 @endcan
 
-                @if (auth()->user()->hasRole('admin'))
+                @if (auth()?->user()?->hasRole('admin'))
                     <li>
                         <hr class="hr-horizontal">
                     </li>
